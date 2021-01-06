@@ -3,4 +3,16 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="chosenColor">#10CE2D</color>
+    <color name="unChosenColor">#000000</color>
+    <color name="colorGray">#aaaaaa</color>
+    <color name="colorBlack">#000000</color>
+    <color name="dogerBlue">#1e90ff</color>
+    <color name="darkBlue">#00008b</color>
+    <color name="royalBlue">#4169e1</color>
+    <color name="aliceBlue">#f0f8ff</color>
+    <color name="lightSkyBlue">#87cefa</color>
+    <color name="white">#FFFFFF</color>
+    <color name="half_white">#00FFFFFF</color>
+    <color name="deepSkyBlue">#00bfff</color>
 </resources>

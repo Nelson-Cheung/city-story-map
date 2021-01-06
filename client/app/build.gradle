@@ -1,10 +1,18 @@
 apply plugin: 'com.android.application'
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\AndroidStudio\\CityStoryMap\\debug.jks')
+            storePassword 'ilovesysu'
+            keyAlias = 'key0'
+            keyPassword 'ilovesysu'
+        }
+    }
     compileSdkVersion 29
     buildToolsVersion "29.0.3"
     defaultConfig {
-        applicationId "edu.sysu.citystorymapv1"
+        applicationId "edu.sysu.citystorymap"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
@@ -17,13 +25,35 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    sourceSets {
+        main {
+            jniLibs.srcDir 'libs'
+        }
+    }
+    lintOptions {
+        // true  所有正式版构建执行规则生成崩溃的lint检查，如果有崩溃问题将停止构建
+        checkReleaseBuilds false
+        //true 错误发生后停止构建
+        abortOnError false
+    }
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation files('libs/BaiduLBS_Android.jar')
+    implementation files('libs\\commons-lang.jar')
+    implementation files('libs\\commons-logging-1.1.1.jar')
+    implementation files('libs\\ezmorph.jar')
+    implementation files('libs\\json-lib-2.2.2-jdk15.jar')
+    implementation files('libs\\commons-beanutils-1.9.4.jar')
+    implementation files('libs\\commons-collections.jar')
+    implementation files('libs\\openbeans-1.0.jar')
+    implementation files('libs\\commons-codec-1.14.jar')
+    implementation files('libs\\jsoup-1.12.1.jar')
+    implementation files('libs\\gson-2.8.2.jar')
 }

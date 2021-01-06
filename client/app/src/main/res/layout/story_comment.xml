@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/head_portrait"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/head_portrait" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="15dp"
+        android:layout_alignTop="@+id/head_portrait"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toEndOf="@+id/head_portrait"
+        android:gravity="center_vertical"
+        android:text="用户名"
+        android:textColor="@color/colorBlack"
+        android:textSize="12sp" />
+
+    <LinearLayout
+        android:id="@+id/time_and_position"
+        android:layout_width="match_parent"
+        android:layout_height="13dp"
+        android:layout_below="@+id/name"
+        android:layout_alignBottom="@+id/head_portrait"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_toEndOf="@+id/head_portrait"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="1900-01-01 00:00"
+            android:textSize="9sp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="北京天安门"
+            android:textColor="@color/dogerBlue"
+            android:textSize="9sp" />
+    </LinearLayout>
+
+    <edu.sysu.citystorymap.editor.view.RichEditorNew
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/comment"
+        android:layout_below="@+id/head_portrait"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="5dp" />
+</RelativeLayout>

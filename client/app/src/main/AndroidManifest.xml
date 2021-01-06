@@ -1,21 +1,72 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="edu.sysu.citystorymapv1">
+    package="edu.sysu.citystorymap">
 
     <application
+        android:name=".initialization.InitializeBaiduMapSdk"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/pic"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity
+            android:name=".entrance.EntranceActivity"
+            android:windowSoftInputMode="adjustResize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
+        <!--主界面-->
+        <activity
+            android:name=".main.MainControlActivity"
+            android:windowSoftInputMode="adjustResize">
+
+        </activity>
+        <!--修改用户信息-->
+
+        <!--显示故事-->
+        <activity
+            android:name=".showstories.ShowStoryActivity"
+            android:windowSoftInputMode="adjustResize"/>
+        <!--登录界面-->
+        <!--用户信息模块-->
+
+        <!--添加故事-->
+        <activity
+            android:name=".editstory.EditStoryActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <!--搜索故事-->
+        <activity
+            android:name=".searchstory.SearchStoryActivity"
+            android:windowSoftInputMode="adjustResize" />
+        <!--百度地图密钥-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="99IHCVPz5csCcwx7xNhXlKQmEy3I5z1V" />
+        <!--百度地图获取定位信息-->
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" />
     </application>
+
+    <!-- 访问网络，进行地图相关业务数据请求，包括地图数据，路线规划，POI检索等 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- 获取网络状态，根据网络状态切换进行数据请求网络转换 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 读取外置存储。如果开发者使用了so动态加载功能并且把so文件放在了外置存储区域，则需要申请该权限，否则不需要 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- 写外置存储。如果开发者使用了离线地图，并且数据写在外置存储区域，则需要申请该权限 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 
 </manifest>

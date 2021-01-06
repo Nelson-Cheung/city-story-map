@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">CityStoryMapV1</string>
+    <string name="app_name">故事地图</string>
+
+    <string-array name="click_maker_choice">
+        <item>添加故事</item>
+        <item>查看故事</item>
+    </string-array>
 </resources>

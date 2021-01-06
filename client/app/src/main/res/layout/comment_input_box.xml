@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/cancel" />
+
+        <TextView
+            android:id="@+id/tittle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/cancel"
+            android:layout_alignBottom="@id/cancel"
+            android:layout_marginLeft="5dp"
+            android:layout_toLeftOf="@id/pulish"
+            android:layout_toRightOf="@id/cancel"
+            android:gravity="center|center_vertical"
+            android:text="说说你的看法吧~"
+            android:textColor="@color/colorBlack"
+            android:textSize="15sp"
+            android:textStyle="bold|italic" />
+
+        <ImageView
+            android:id="@+id/pulish"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/upload" />
+    </RelativeLayout>
+
+
+    <edu.sysu.citystorymap.editor.view.RichEditorNew
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/comment_box"
+        android:layout_marginBottom="5dp" />
+
+</LinearLayout>
