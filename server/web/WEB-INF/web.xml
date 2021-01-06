@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+    <!--注册-->
+    <servlet>
+        <servlet-name>SendRegisterCode</servlet-name>
+        <servlet-class>register.SendRegisterCode</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SendRegisterCode</servlet-name>
+        <url-pattern>/send_register_code</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Register</servlet-name>
+        <servlet-class>register.Register</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Register</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+    <!--登录-->
+    <servlet>
+        <servlet-name>Login</servlet-name>
+        <servlet-class>login.Login</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>Login</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <!--重设密码-->
+    <servlet>
+        <servlet-name>ResetPassword</servlet-name>
+        <servlet-class>resetpassword.ResetPassword</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ResetPassword</servlet-name>
+        <url-pattern>/reset_password</url-pattern>
+    </servlet-mapping>
+
+    <!--发送验证码-->
+    <servlet>
+        <servlet-name>SendVerificationCode</servlet-name>
+        <servlet-class>sendverificationcode.SendVerificationCode</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>SendVerificationCode</servlet-name>
+        <url-pattern>/send_verification_code</url-pattern>
+    </servlet-mapping>
+
+    <!--获取用户信息-->
+    <servlet>
+        <servlet-name>GetUser</servlet-name>
+        <servlet-class>user.GetUser</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetUser</servlet-name>
+        <url-pattern>/get_user</url-pattern>
+    </servlet-mapping>
+
+    <!--更新用户-->
+    <servlet>
+        <servlet-name>UpdateUser</servlet-name>
+        <servlet-class>user.UpdateUser</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateUser</servlet-name>
+        <url-pattern>/update_user</url-pattern>
+    </servlet-mapping>
+
+    <!--更新故事-->
+    <servlet>
+        <servlet-name>UpdateStory</servlet-name>
+        <servlet-class>story.UpdateStory</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UpdateStory</servlet-name>
+        <url-pattern>/update_story</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>GetStory</servlet-name>
+        <servlet-class>story.GetStory</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>GetStory</servlet-name>
+        <url-pattern>/get_story</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>DeleteStory</servlet-name>
+        <servlet-class>story.DeleteStory</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>DeleteStory</servlet-name>
+        <url-pattern>/delete_story</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PostFile</servlet-name>
+        <servlet-class>postfile.PostFile</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>PostFile</servlet-name>
+        <url-pattern>/post_file</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>InceaseStoryAttribute</servlet-name>
+        <servlet-class>story.IncreaseStoryAttribute</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>InceaseStoryAttribute</servlet-name>
+        <url-pattern>/increase_story_attribute</url-pattern>
+    </servlet-mapping>
+</web-app>
